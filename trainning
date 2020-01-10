@@ -1,0 +1,72 @@
+2020-01-10 20:02:45.297670: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+WARNING:tensorflow:From run_cnn.py:87: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+Training and evaluating...
+Epoch: 1
+Iter:      0, Train Loss:    2.6, Train Acc:   7.81%, Val Loss:    2.6, Val Acc:   7.60%, Time: 0:00:03 *
+Iter:    100, Train Loss:    1.6, Train Acc:  64.06%, Val Loss:    1.6, Val Acc:  61.45%, Time: 0:00:17 *
+Iter:    200, Train Loss:   0.51, Train Acc:  87.50%, Val Loss:    0.6, Val Acc:  84.54%, Time: 0:00:32 *
+Iter:    300, Train Loss:   0.32, Train Acc:  90.62%, Val Loss:   0.41, Val Acc:  88.42%, Time: 0:00:46 *
+Iter:    400, Train Loss:   0.46, Train Acc:  89.06%, Val Loss:   0.35, Val Acc:  90.32%, Time: 0:01:01 *
+Iter:    500, Train Loss:   0.28, Train Acc:  89.06%, Val Loss:   0.31, Val Acc:  90.91%, Time: 0:01:16 *
+Iter:    600, Train Loss:    0.3, Train Acc:  92.19%, Val Loss:   0.28, Val Acc:  91.77%, Time: 0:01:31 *
+Iter:    700, Train Loss:   0.25, Train Acc:  92.19%, Val Loss:   0.26, Val Acc:  92.37%, Time: 0:01:45 *
+Iter:    800, Train Loss:   0.11, Train Acc:  96.88%, Val Loss:   0.24, Val Acc:  92.97%, Time: 0:02:01 *
+Iter:    900, Train Loss:   0.17, Train Acc:  95.31%, Val Loss:   0.25, Val Acc:  92.83%, Time: 0:02:17
+Iter:   1000, Train Loss:   0.25, Train Acc:  95.31%, Val Loss:   0.24, Val Acc:  93.31%, Time: 0:02:32 *
+Epoch: 2
+Iter:   1100, Train Loss:   0.13, Train Acc:  98.44%, Val Loss:   0.23, Val Acc:  93.32%, Time: 0:02:47 *
+Iter:   1200, Train Loss:   0.28, Train Acc:  93.75%, Val Loss:   0.22, Val Acc:  93.71%, Time: 0:03:02 *
+Iter:   1300, Train Loss:   0.24, Train Acc:  93.75%, Val Loss:   0.21, Val Acc:  93.95%, Time: 0:03:17 *
+Iter:   1400, Train Loss:    0.3, Train Acc:  93.75%, Val Loss:   0.21, Val Acc:  94.08%, Time: 0:03:32 *
+Iter:   1500, Train Loss:   0.17, Train Acc:  92.19%, Val Loss:    0.2, Val Acc:  94.23%, Time: 0:03:47 *
+Iter:   1600, Train Loss:   0.32, Train Acc:  92.19%, Val Loss:   0.21, Val Acc:  93.77%, Time: 0:04:02
+Iter:   1700, Train Loss:  0.036, Train Acc:  98.44%, Val Loss:   0.21, Val Acc:  94.14%, Time: 0:04:17
+Iter:   1800, Train Loss:  0.059, Train Acc:  98.44%, Val Loss:    0.2, Val Acc:  94.11%, Time: 0:04:33
+Iter:   1900, Train Loss:    0.2, Train Acc:  92.19%, Val Loss:    0.2, Val Acc:  94.31%, Time: 0:04:48 *
+Iter:   2000, Train Loss:   0.12, Train Acc:  95.31%, Val Loss:   0.21, Val Acc:  94.09%, Time: 0:05:04
+Iter:   2100, Train Loss:    0.1, Train Acc:  95.31%, Val Loss:   0.19, Val Acc:  94.48%, Time: 0:05:19 *
+Epoch: 3
+Iter:   2200, Train Loss:  0.049, Train Acc: 100.00%, Val Loss:   0.19, Val Acc:  94.48%, Time: 0:05:35
+Iter:   2300, Train Loss:  0.064, Train Acc:  96.88%, Val Loss:   0.19, Val Acc:  94.66%, Time: 0:05:51 *
+Iter:   2400, Train Loss:  0.073, Train Acc:  98.44%, Val Loss:   0.19, Val Acc:  94.52%, Time: 0:06:06
+Iter:   2500, Train Loss:   0.21, Train Acc:  93.75%, Val Loss:    0.2, Val Acc:  94.00%, Time: 0:06:21
+Iter:   2600, Train Loss:  0.096, Train Acc:  96.88%, Val Loss:   0.19, Val Acc:  94.52%, Time: 0:06:35
+Iter:   2700, Train Loss:   0.23, Train Acc:  92.19%, Val Loss:   0.19, Val Acc:  94.48%, Time: 0:06:50
+Iter:   2800, Train Loss:   0.12, Train Acc:  93.75%, Val Loss:    0.2, Val Acc:  94.45%, Time: 0:07:05
+Iter:   2900, Train Loss:   0.16, Train Acc:  98.44%, Val Loss:   0.19, Val Acc:  94.60%, Time: 0:07:20
+Iter:   3000, Train Loss:  0.019, Train Acc: 100.00%, Val Loss:   0.18, Val Acc:  94.91%, Time: 0:07:34 *
+Iter:   3100, Train Loss:  0.098, Train Acc:  96.88%, Val Loss:   0.19, Val Acc:  94.42%, Time: 0:07:49
+Iter:   3200, Train Loss:   0.13, Train Acc:  92.19%, Val Loss:   0.18, Val Acc:  94.88%, Time: 0:08:04
+Epoch: 4
+Iter:   3300, Train Loss:  0.061, Train Acc:  96.88%, Val Loss:   0.18, Val Acc:  94.95%, Time: 0:08:19 *
+Iter:   3400, Train Loss:   0.13, Train Acc:  96.88%, Val Loss:   0.19, Val Acc:  94.77%, Time: 0:08:34
+Iter:   3500, Train Loss:   0.18, Train Acc:  95.31%, Val Loss:   0.18, Val Acc:  94.92%, Time: 0:08:48
+Iter:   3600, Train Loss:  0.051, Train Acc:  98.44%, Val Loss:   0.19, Val Acc:  95.08%, Time: 0:09:04 *
+Iter:   3700, Train Loss:  0.024, Train Acc: 100.00%, Val Loss:   0.19, Val Acc:  94.80%, Time: 0:09:20
+Iter:   3800, Train Loss:   0.06, Train Acc:  98.44%, Val Loss:   0.19, Val Acc:  94.85%, Time: 0:09:35
+Iter:   3900, Train Loss:  0.098, Train Acc:  96.88%, Val Loss:   0.18, Val Acc:  94.80%, Time: 0:09:51
+Iter:   4000, Train Loss:  0.094, Train Acc:  96.88%, Val Loss:   0.19, Val Acc:  94.97%, Time: 0:10:06
+Iter:   4100, Train Loss:  0.022, Train Acc:  98.44%, Val Loss:   0.18, Val Acc:  95.00%, Time: 0:10:22
+Iter:   4200, Train Loss:  0.075, Train Acc:  96.88%, Val Loss:   0.18, Val Acc:  95.06%, Time: 0:10:37
+Epoch: 5
+Iter:   4300, Train Loss:    0.1, Train Acc:  93.75%, Val Loss:   0.19, Val Acc:  95.06%, Time: 0:10:52
+Iter:   4400, Train Loss: 0.0076, Train Acc: 100.00%, Val Loss:   0.19, Val Acc:  95.11%, Time: 0:11:08 *
+Iter:   4500, Train Loss:  0.039, Train Acc:  98.44%, Val Loss:    0.2, Val Acc:  94.69%, Time: 0:11:23
+Iter:   4600, Train Loss:  0.023, Train Acc:  98.44%, Val Loss:   0.21, Val Acc:  94.72%, Time: 0:11:38
+Iter:   4700, Train Loss: 0.0085, Train Acc: 100.00%, Val Loss:   0.19, Val Acc:  95.02%, Time: 0:11:53
+Iter:   4800, Train Loss:  0.096, Train Acc:  96.88%, Val Loss:   0.19, Val Acc:  95.12%, Time: 0:12:08 *
+Iter:   4900, Train Loss:  0.046, Train Acc: 100.00%, Val Loss:   0.19, Val Acc:  95.00%, Time: 0:12:23
+Iter:   5000, Train Loss:   0.03, Train Acc:  98.44%, Val Loss:   0.18, Val Acc:  95.28%, Time: 0:12:39 *
+Iter:   5100, Train Loss:  0.025, Train Acc:  98.44%, Val Loss:   0.18, Val Acc:  94.97%, Time: 0:12:53
+Iter:   5200, Train Loss:  0.023, Train Acc: 100.00%, Val Loss:   0.18, Val Acc:  95.17%, Time: 0:13:11
+Iter:   5300, Train Loss:   0.11, Train Acc:  96.88%, Val Loss:   0.19, Val Acc:  95.23%, Time: 0:13:26
+Epoch: 6
+Iter:   5400, Train Loss: 0.0041, Train Acc: 100.00%, Val Loss:    0.2, Val Acc:  95.14%, Time: 0:13:41
+Iter:   5500, Train Loss:    0.1, Train Acc:  98.44%, Val Loss:    0.2, Val Acc:  94.89%, Time: 0:13:56
+Iter:   5600, Train Loss:  0.047, Train Acc:  98.44%, Val Loss:    0.2, Val Acc:  95.18%, Time: 0:14:11
+Iter:   5700, Train Loss: 0.0097, Train Acc: 100.00%, Val Loss:    0.2, Val Acc:  95.26%, Time: 0:14:26
+Iter:   5800, Train Loss:  0.014, Train Acc: 100.00%, Val Loss:    0.2, Val Acc:  95.20%, Time: 0:14:41
+Iter:   5900, Train Loss: 0.0065, Train Acc: 100.00%, Val Loss:    0.2, Val Acc:  95.00%, Time: 0:14:56
+Iter:   6000, Train Loss:  0.011, Train Acc: 100.00%, Val Loss:   0.19, Val Acc:  95.18%, Time: 0:15:10
+No optimization for a long time, auto-stopping...

@@ -47,10 +47,10 @@ class PersonHandler(handler.ContentHandler):
       self.person.update({self.current_tag: content})
 
 if __name__ == "__main__":
-      f = open("./data.xml")
+      f = open("./XinhuaNewsAutoTag.v2.xml")
       #f1 = open("./result.txt")
-      file_handle = open('./result.txt', mode='w')
+      file_handle = open('./XinhuaNewsAutoTag.v2.txt', mode='w')
       # 如果源文件gbk  转码      若是utf-8，去掉decode.encode
-      parseString(f.read().decode("gbk").encode("utf-8"), PersonHandler(file_handle))
+      parseString(f.read(), PersonHandler(file_handle))
       f.close()
       file_handle.close()

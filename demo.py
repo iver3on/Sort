@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import sys,os
-#person 处理类
+import sys
 from xml.sax import handler,parseString
-fields = ("topCate","content")
-reload(sys)
-sys.setdefaultencoding('utf-8')
+fields = ("cnccTopCate","content")
+import importlib
+importlib.reload(sys)
 global linenumber
 
 class PersonHandler(handler.ContentHandler):
@@ -28,7 +27,7 @@ class PersonHandler(handler.ContentHandler):
     self.in_quote = 1
   #结束，插入数据库
   def endElement(self, name):
-    #以news结尾  代表读取一个news的信息结束
+      #以news结尾  代表读取一个news的信息结束
       if name == "news":
         self.datanumber += 1
         #do something
@@ -37,7 +36,7 @@ class PersonHandler(handler.ContentHandler):
         result = ""
         for i in fields:
           file_handle.write(self.person.get(i) + ' ')
-        print '第'+str(self.datanumber)+'组数据'
+        print('第'+str(self.datanumber)+'组数据')
         file_handle.write('\n')
         #处理
       self.in_quote = 0
@@ -47,10 +46,10 @@ class PersonHandler(handler.ContentHandler):
       self.person.update({self.current_tag: content})
 
 if __name__ == "__main__":
-      f = open("./XinhuaNewsAutoTag.v2.xml")
+      f = open("./XinhuaNewsAutoTag.v2.xml",'r', encoding='UTF-8')
       #f1 = open("./result.txt")
-      file_handle = open('./XinhuaNewsAutoTag.v2.txt', mode='w')
+      file_handle = open('./XinhuaNewsAutoTag.v2.txt', mode='w',encoding='UTF-8')
       # 如果源文件gbk  转码      若是utf-8，去掉decode.encode
-      parseString(f.read(), PersonHandler(file_handle))
+      parseString(f.read().encode('utf-8'), PersonHandler(file_handle))
       f.close()
       file_handle.close()

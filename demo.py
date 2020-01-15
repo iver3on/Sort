@@ -2,7 +2,7 @@
 
 import sys
 from xml.sax import handler,parseString
-fields = ("cnccTopCate","content")
+fields = ("topCate", "content")
 import importlib
 importlib.reload(sys)
 global linenumber
@@ -32,12 +32,40 @@ class PersonHandler(handler.ContentHandler):
         self.datanumber += 1
         #do something
         #in_fields = tuple([ ('"' + self.person.get(i,"") + '"')  for i in fields ])
-        #print fields
         result = ""
         for i in fields:
-          file_handle.write(self.person.get(i) + ' ')
+            #print(i)
+            if i == "topCate":
+                if self.person.get(i)=='经':
+                    file_handle.write('财经'+'AAA')
+                elif self.person.get(i)=='内时政':
+                    file_handle.write('国内时政'+'AAA')
+                elif self.person.get(i)=='他':
+                    file_handle.write('其他'+'AAA')
+                elif self.person.get(i)=='技':
+                    file_handle.write('科技'+'AAA')
+                elif self.person.get(i) == '育':
+                    file_handle.write('教育'+'AAA')
+                elif self.person.get(i) == '政':
+                    file_handle.write('时政'+'AAA')
+                elif self.person.get(i) == '际时政':
+                    file_handle.write('国际时政' + 'AAA')
+                elif self.person.get(i) == '件':
+                    file_handle.write('突发事件' + 'AAA')
+                elif self.person.get(i) == '会、法制' or self.person.get(i) == '法制' or self.person.get(i) == '、法制':
+                    file_handle.write('社会、法制' + 'AAA')
+                elif self.person.get(i) == '乐':
+                    file_handle.write('娱乐' + 'AAA')
+                elif self.person.get(i) == '、健康' or self.person.get(i) == '健康':
+                    file_handle.write('卫生、健康' + 'AAA')
+                else:
+                    file_handle.write(self.person.get(i) + 'AAA')
+            else:
+                file_handle.write(self.person.get(i) + '\n')
         print('第'+str(self.datanumber)+'组数据')
-        file_handle.write('\n')
+        # if self.datanumber >200000:
+        #     file_handle.write('EOF')
+        #file_handle.write('\n')
         #处理
       self.in_quote = 0
   def characters(self, content):
@@ -45,11 +73,18 @@ class PersonHandler(handler.ContentHandler):
     if self.in_quote:
       self.person.update({self.current_tag: content})
 
+  def printKey(self):
+      print(self.keySet)
+
 if __name__ == "__main__":
-      f = open("./XinhuaNewsAutoTag.v2.xml",'r', encoding='UTF-8')
+    try:
+      f = open("./XinhuaNewsAutoTag.v2.xml", 'r', encoding='UTF-8')
       #f1 = open("./result.txt")
-      file_handle = open('./XinhuaNewsAutoTag.v2.txt', mode='w',encoding='UTF-8')
+      file_handle = open('./XinhuaNewsAutoTag.v2.txt', mode='w', encoding='UTF-8')
       # 如果源文件gbk  转码      若是utf-8，去掉decode.encode
       parseString(f.read().encode('utf-8'), PersonHandler(file_handle))
+      #print(keySet)
       f.close()
       file_handle.close()
+    except Exception as e:
+        print(e)

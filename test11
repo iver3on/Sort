@@ -1,0 +1,35 @@
+
+
+
+if __name__ == "__main__":
+    file = open("./XinhuaNewsAutoTag.v2.txt", 'r', encoding='UTF-8')
+    file_handle = open('./XinhuaNewsAutoTag.test.txt', mode='w', encoding='UTF-8')
+    key = set()
+    linenumber = 0
+    while 1:
+        lines = file.readlines(2000)
+        if not lines or linenumber > 3000:
+            break
+        for line in lines:
+            #line.split()
+            file_handle.write(line + '\n')
+            linenumber+=1
+            #key.add(line.split('AAA')[0])
+            pass  # do something
+    #print(key)
+
+
+
+if __name__ == "__main__":
+    file = open("./XinhuaNewsAutoTag.v2.txt", 'r', encoding='UTF-8')
+    key = set()
+    linenumber = 0
+    while 1:
+        lines = file.readlines(10000)
+        if not lines:
+            break
+        for line in lines:
+            #line.split()
+            key.add(line.split('AAA')[0])
+            pass  # do something
+    print(key)
